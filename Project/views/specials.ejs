@@ -1,0 +1,79 @@
+<%- include('partials/header.ejs') %>
+<section id="specials" class="specials" style="background-image: url(http://localhost:5000/assets/img/bg.jpg);">
+    <div class="container">
+
+      <br>
+      <div class="section-title mt-lg-5">
+        <h2 style="color: white">Check our <span>Specials</span></h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <ul class="nav nav-tabs flex-column"> 
+            <li class="nav-item">
+              <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1" style="color: #ffb03b;">Chicken Karahi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-2" style="color: #ffb03b;">Mutton Karahi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-3" style="color: #ffb03b;">Chicken Biryani</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-4" style="color: #ffb03b;">Chicken malai boti</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-9 mt-4 mt-lg-0">
+          <div class="tab-content">
+            <div class="tab-pane active show" id="tab-1" style="color: white;">
+              <div class="row">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3 style="color: white;">Chicken Karahi</h3>
+                  <p class="fst-italic" style="color: white;">Our most loved chicken karahi made with fresh chicken and fresh tomatoes from our farm.</p>
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="assets/img/chickenkarahi.png" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-2" style="color: white;">
+              <div class="row">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3 style="color: white;">Mutton Karahi</h3>
+                  <p class="fst-italic" style="color: white;">Made with fresh mutton alongside with fresh tomatoes and yogurt.</p>
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="assets/img/muttonkarahi.png" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-3" style="color: white;">
+              <div class="row">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3 style="color: white;">Chicken Biryani</h3>
+                  <p class="fst-italic" style="color: white;">Our most popular Chicken Biryani, made with best quality rice and fresh chicken.</p>
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="assets/img/biryani.png" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-4" style="color: white;">
+              <div class="row">
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3 style="color: white;">Chicken Malai Boti</h3>
+                  <p class="fst-italic" style="color: white;" >Our famous BBQ Malai boti, so soft and tender that it melts all your emotions.</p>
+                </div>
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="assets/img/malaiboti.png" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <%- include('partials/footer.ejs') %>

@@ -1,0 +1,59 @@
+<!-- include header -->
+<%- include('partials/adminHeader') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/adminUI/admin"><i class="fas fa-angle-double-left"></i> All Product</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update Product</h2>
+            <span class="text-light">Use the below form to Update Product</span>
+        </div>
+
+        <!-- add user form -->
+         <!-- form handling -->
+ <form action="/products/update/<%=prod._id%>" method="POST" id="update_product">
+    <div class="new_product">
+        <div class="form-group">
+            <label for="name"class="text-light">Name</label>
+            <input type="hidden" name="id" value="<%= prod._id %>">
+            <input type="text" name="food_name" value="<%= prod.food_name %>" placeholder="Pizza">
+        </div>
+        <div class="form-group">
+            <label for="Ingredients" class="text-light">Ingredients</label>
+            <input type="text" name="Ingredients" value="<%= prod.Ingredients%>" placeholder="Cheese, Onions, Condiments etc.">
+        </div>
+        <div class="form-group">
+            <label for="Category" class="text-light">Category</label>
+            <input id ="Category" type="text" name="Category" value="<%= prod.Category%>" placeholder="Fast Food">
+        </div>
+
+        <div class="form-group">
+            <label for="Description" class="text-light">Description</label>
+            <input id="Description" type="text" name="Description" value="<%= prod.Description%>" placeholder="A dish consisting of a flat round cake of minced beef">
+        </div>
+
+        <div class="form-group">
+            <label for="Price" class="text-white">Price</label><br>
+            <input id="Price" type="text" name="Price" value="<%= prod.Price%>" placeholder="500" min="1">
+        </div>
+
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">UPDATE</button>
+        </div>
+
+    </div>
+</form>
+       
+    </div>
+</main>
+
+<!-- include footer -->
+<%- include('partials/adminFooter') %>
+<!-- /include footer -->

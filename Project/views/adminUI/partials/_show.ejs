@@ -1,0 +1,19 @@
+
+<% for(var i = 0; i < prod.length; i++) { %>
+<tr class="data-color">
+    <td><%= i + 1 %></td>
+    <td><%= prod[i].food_name %></td>
+    <td><%= prod[i].Ingredients %></td>
+    <td><%= prod[i].Category %></td>
+    <td><%= prod[i].Description %></td>
+    <td><%= prod[i].Price %></td>
+    <td>
+        <a href="/adminUI/update_product?id=<%= prod[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a href="/products/delete/<%= prod[i]._id%>" class="btn border-shadow delete">
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>

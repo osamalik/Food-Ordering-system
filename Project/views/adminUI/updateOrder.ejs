@@ -1,0 +1,58 @@
+<!-- include header -->
+<%- include('partials/adminHeader') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/order/display_order"><i class="fas fa-angle-double-left"></i> All Order</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update Order</h2>
+            <span class="text-light">Use the below form to Update Order</span>
+        </div>
+
+         
+ <form action="/order/update/<%=ord._id%>" method="POST" id="update_product">
+    <div class="new_product">
+        <div class="form-group">
+            <label for="Name"class="text-light">Name</label>
+            <input type="hidden" name="id" value="<%= ord._id %>">
+            <input type="text" name="Name" value="<%= ord.Name %>" placeholder="Osama">
+        </div>
+        <div class="form-group">
+            <label for="Email" class="text-light">Email</label>
+            <input type="Email" name="Email" value="<%= ord.Email%>" placeholder="e.g f190935@nu.edu.pk">
+        </div>
+        <div class="form-group">
+            <label for="Phone_number" class="text-light">Phone Number</label>
+            <input id ="Phone_number" type="text" name="Phone_number" value="<%= ord.Phone_number%>" placeholder="e.g 0300-xxxxxxxxxxx">
+        </div>
+
+        <div class="form-group">
+            <label for="food_name" class="text-light">Food Name</label>
+            <input id="food_name" type="text" name="food_name" value="<%= ord.food_name%>" placeholder="Pizza etc.">
+        </div>
+
+        <div class="form-group">
+            <label for="Quantity" class="text-white">Quantity</label><br>
+            <input id="Quantity" type="number" name="Quantity" value="<%= ord.Quantity%>" placeholder="500" min="1">
+        </div>
+
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">UPDATE</button>
+        </div>
+
+    </div>
+</form>
+       
+    </div>
+</main>
+
+<!-- include footer -->
+<%- include('partials/adminFooter') %>
+<!-- /include footer -->

@@ -1,0 +1,92 @@
+<%- include('partials/adminHeader.ejs') %>
+ <!-- Main Site -->
+ <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <a href="/adminUI/addProduct" class="border-shadow">
+                <span class="text-gradient" style="font-size:medium; font-weight: bold;">Add Product <i class="fas fa-pizza-slice" style="font-size:19px"></i></span>
+            </a>
+        </div>
+
+        <br>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" id="searchName" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: #e9e41d; border-color: yellow;">Search</button>
+        </form>
+
+
+        <!-- form handling -->
+        <form action="/" method="get">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Food Name</th>
+                        <th>Ingredients</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                    <%- include('partials/_show') %>
+
+                </tbody>
+            </table>
+        </form>
+
+        <div class="center">
+            <% if (pages > 0) { %>
+              <div class="center"></div>
+              <div class="pagination">
+              <% if(current == 1) { %>
+              <a class="disabled">&laquo;</a>
+              <% } else { %>
+              <a href="/adminUI/admin/1">&laquo;</a>
+              <% } %>
+              <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+              <% if (i !== 1) { %>
+                <li class="disabled"></li>
+              <% } %>
+              <% for (; i <= (Number(current) + 4) && i <= pages; i++) { %>
+                <% if (i == current) { %>
+                  <a class="active"><%= i %></a>
+                <% } else { %>
+                  <a href="/adminUI/admin/<%= i %>"><%= i %></a>
+                <% } %>
+                <% if (i == Number(current) + 4 && i < pages) { %>
+                  <li class="disabled"></li>
+                <% } %>
+              <% } %>
+              <% if (current == pages) { %>
+                <li class="disabled"></li>
+              <% } else { %>
+                <a href="/adminUI/admin/<%= pages %>">&raquo;</a>
+              <% } %>
+              </div>
+            </div>
+            <% } %>
+          </div>
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- Footer -->
+<%- include('partials/adminFooter.ejs') %>
+
+<script>
+    $(document).ready(function() {
+        $('#searchName').keydown(function() {
+            var searchText = $('#searchName').val().toLowerCase();
+            var rows = document.getElementsByClassName('data-color')
+            for (var i = 0; i < rows.length; i++){
+                if(searchText === "" || rows[i].textContent.toLowerCase().includes(searchText))
+                    $(rows[i]).show();
+                else
+                    $(rows[i]).hide();
+            }
+        })
+    })
+</script>

@@ -1,0 +1,18 @@
+<% for(var i = 0; i < ord.length; i++) { %>
+    <tr class="data-color">
+        <td><%= ord[i].Name %></td>
+        <td><%= ord[i].Email %></td>
+        <td><%= ord[i].Phone_number %></td>
+        <td><%= ord[i].food_name %></td>
+        <td><%= ord[i].Quantity %></td>
+        <td><%= ord[i].Price %></td>
+        <td>
+            <a href="/order/updateOrder?id=<%= ord[i]._id%>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            <a href="/order/delete/<%= ord[i]._id%>" class="btn border-shadow delete">
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %>

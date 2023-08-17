@@ -1,0 +1,71 @@
+<%- include('partials/header.ejs') %>
+<section id="contact" class="contact" style="background-image: url(http://localhost:5000/assets/img/contactBG.jpg);">
+    <div class="container">
+
+      <br>
+      <br>
+      <div class="section-title mt-lg-5">
+        <h2><span>Contact</span> Us</h2>
+        <p >Feel free to ask us anything you want to know about our restaurant and our cuisines.</p>
+      </div>
+    </div>
+
+    <div class="map">
+      <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d425289.3917350858!2d72.80591136385284!3d33.61637228186901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbfd07891722f%3A0x6059515c3bdb02b6!2sIslamabad%2C%20Islamabad%20Capital%20Territory%2C%20Pakistan!5e0!3m2!1sen!2s!4v1650477012063!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </div>
+
+    <div class="container mt-0" style="background-color: #FFFF;">
+
+      <div class="info-wrap">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 info">
+            <i class="bi bi-geo-alt"></i>
+            <h4>Location:</h4>
+            <p>Street 007<br>Islamabad, AB 1234</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+            <i class="bi bi-clock"></i>
+            <h4>Open Hours:</h4>
+            <p>Monday-Sunday:<br>11:00 AM - 23:00 PM</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+            <i class="bi bi-envelope"></i>
+            <h4>Email:</h4>
+            <p>cravings@example.com<br>contact@example.com</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+            <i class="bi bi-phone"></i>
+            <h4>Call:</h4>
+            <p>+92 1234 5678 00<br>+92 1234 5678 00</p>
+          </div>
+        </div>
+      </div>
+
+      <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <div class="my-3">
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your message has been sent. Thank you!</div>
+        </div>
+        <div class="text-center"><button type="submit">Send Message</button></div>
+      </form>
+
+    </div>
+  </section>
+  <%- include('partials/footer.ejs') %>

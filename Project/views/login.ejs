@@ -1,0 +1,116 @@
+<body>
+<div class="row mt-2">
+  <div class="col-md-5 m-auto" style="background-color: yellow;">
+    <div class="card card-body" style="background-color: black;">
+      <a href="/adminUI/admin_Login" class="border-shadow">
+      <button class="button" style="vertical-align:right"><span><b href="/adminUI/admin_Login">ADMIN</b></span></button>
+      </a>
+      <h1 class="text-center mb-0">
+        <img src="http://localhost:5000/assets/img/cravings.png" style="width:200px;">
+      </img></h1>
+        <h1 class="text-center mb-2"><b>Login</b></h1>
+      <% include ./partials/messages %>
+      <form action="/users/login" method="POST">
+        <div class="form-group">
+          <label for="email"><b>Email</b></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="Enter Email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password"><b>Password</b></label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            placeholder="Enter Password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+      </form>
+      <p class="lead mt-4">
+        <a href="/users/forgotPassword"><b>Forgot Password? </b></a>
+      </p>
+      <p class="lead mt-4">
+        <b>Don't have an Account? </b><a href="/users/register"><b>Register</b></a>
+      </p>
+    </div>
+  </div>
+</div>
+</body>
+
+<style>
+  body {
+        width: 100%;
+        align-items : center;
+        height: 100%;
+          
+  
+        background-position: center center;
+  
+        background-repeat: no-repeat;
+  
+        
+        background-attachment: fixed;
+  
+        
+        background-size: cover;
+  
+        background-color: green;
+        overflow: hidden;
+  
+        background-image:url('http://localhost:5000/assets/img/background-login.jpg');
+        font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+        color: azure;
+    }
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 12px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  right:-400px;
+  position: relative;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+  font-family: cursive;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+  </style>

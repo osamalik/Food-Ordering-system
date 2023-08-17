@@ -1,0 +1,33 @@
+ <!-- form-->
+ <form action="/products/create" method="POST" id="add_product">
+    <div class="new_product">
+        <div class="form-group">
+            <label for="name" class="text-white">Food Name</label>
+            <input type="hidden" name="Name" value="">
+            <input id="food_name" type="text" name="food_name" value="" placeholder="Burger">
+        </div>
+        <div class="form-group">
+            <label for="Ingredients" class="text-white">Ingredients</label>
+            <input id="Ingredients" type="text" name="Ingredients" value="" placeholder="Cheese, Onions, Condiments etc.">
+        </div>
+        <div class="form-group">
+            <label for="Category" class="text-white">Category</label>
+            <input id ="Category" type="text" name="Category" value="" placeholder="Fast Food">
+        </div>
+
+        <div class="form-group">
+            <label for="Description" class="text-white">Description</label>
+            <input id="Description" type="text" name="Description" value="" placeholder="A dish consisting of a flat round cake of minced beef">
+        </div>
+
+        <div class="form-group">
+            <label for="Price" class="text-white">Price</label><br>
+            <input id="Price" type="text" name="Price" value="" placeholder="500" min="1">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update" min="0"><b>INSERT FOOD<b></button>
+        </div>
+
+    </div>
+</form>

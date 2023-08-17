@@ -1,0 +1,27 @@
+<!-- /Header -->
+<%- include('partials/adminHeader.ejs') %>
+
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+               <a href="/adminUI/admin/1" class="border-shadow">
+                   <span class="text-gradient" style="font-size:medium; font-weight: bold;"><i class="fas fa-angle-double-left" ></i> All Products<i class="fas fa-pizza-slice" style="font-size:19px"></i></span>
+               </a>
+        </div>
+        <div class="form-title text-center">
+            <h1 class="text-white">New Product</h1>
+            <span class="text-white">Enter Food Details Below</span>
+        </div>
+
+        <!-- product form -->
+        <%- include('partials/_form.ejs') %>
+       
+    </div>
+</main>
+
+<!-- Footer -->
+<%- include('partials/adminFooter.ejs') %>
+
+
+
+

@@ -1,0 +1,27 @@
+<form action="/products/order" method="post" id="order">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 form-group">
+        <input type="text" name="name" class="form-control" id="name" placeholder="Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+      </div>
+      <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+        <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email">
+      </div>
+      <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+        <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+      </div>
+      <div class="col-lg-4 col-md-6 form-group mt-3">
+        <input type="text" name="foodname" class="form-control" id="foodname" placeholder="Food Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+      </div>
+      <div class="col-lg-4 col-md-6 form-group mt-3">
+        <input type="number" name="quantity" class="form-control" id="quantity" placeholder="Quantity" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+      </div>
+      <div class="col-lg-4 col-md-6 form-group mt-3">
+        <input type="number" name="price" class="form-control" id="price" placeholder="Price" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+      </div>
+      <div class="col-lg-4 col-md-6 form-group mt-3">
+      <input type="text" name="description" class="form-control" id="description" placeholder="Description" data-rule="minlen:4" data-msg="Please enter at least 4 chars"
+      style="height:150px;font-size:14pt;">
+      </div>
+    </div>
+    <div class="text-center"><button class ="btnOrder" type="submit">Place Order</button></div>
+  </form>
